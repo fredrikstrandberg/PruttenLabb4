@@ -15,22 +15,20 @@ public class Container extends BagComponent {
     }
 
     public void add(BagComponent newBagComponent) {
-        containerWeight += newBagComponent.getWeight();
         bagComponents.add(newBagComponent);
     }
 
     public void remove(BagComponent newBagComponent) {
-        containerWeight -= newBagComponent.getWeight();
         bagComponents.remove(newBagComponent);
     }
 
     public int getWeight() {
-        int weight;
-        weight = containerWeight;
+        int totalWeight = containerWeight;
+
         for (BagComponent bagComponent : bagComponents) {
-            weight += bagComponent.getWeight();
+            totalWeight += bagComponent.getWeight();
         }
-        return weight;
+        return totalWeight;
     }
 
     public String toString() {

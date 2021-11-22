@@ -36,5 +36,8 @@ public class SuitCaseGenerator {
         System.out.println(suitCase);
         System.out.println(suitCase.getWeight());
 
+        necessar.remove(soap);
+        System.out.println(suitCase);
+        System.out.println(suitCase.getWeight());
     }
 }

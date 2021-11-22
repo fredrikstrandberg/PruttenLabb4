@@ -2,7 +2,6 @@ package Uppgift1;
 
 public abstract class BagComponent {
 
-    int weight;
     public BagComponent(){}
 
     public void add(BagComponent newSongComponent) {
