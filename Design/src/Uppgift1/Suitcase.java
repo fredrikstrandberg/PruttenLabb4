@@ -9,7 +9,7 @@ public class Suitcase {
         Component plasticBag = new Container("Plastic bag", 100);
         Component backpack = new Container("Backpack", 100);
 
-        Component headphoneCase = new Container("Headphonecase", 100);
+        Component headphoneCase = new Container("Headphone case", 100);
 
         Component toothbrush = new Leaf("Toothbrush", 100);
         Component toothpaste = new Leaf("Toothpaste", 100);
@@ -36,6 +36,11 @@ public class Suitcase {
 
         plasticBag.add(fruit); plasticBag.add(chocolate); // add Leafs to plastic bag
 
-        suitcase.showContent(); //show content and total weight of suitcase
+
+        System.out.println(suitcase);
+        System.out.println(suitcase.getObjectWeight());
+        headphoneCase.remove(headphones);
+        System.out.println(suitcase);
+        System.out.println(suitcase.getObjectWeight());
     }
 }

@@ -8,6 +8,10 @@ public class Leaf extends Component {
         objectName = newObjectName;
         objectWeight = newObjectWeight;
     }
-    public String getObjectName() { return objectName; }
     public int getObjectWeight() { return objectWeight; }
+
+    public String toString(){ return objectName; }
+
+
+
 }

@@ -7,10 +7,10 @@ public class Component {
     public Component(){}
 
     public void add(Component newComponent){}
+    public void remove(Component curComponent){}
 
-    public void showContent(){}
-
-    public String getObjectName() { return objectName; }
     public int getObjectWeight() { return objectWeight; }
+
+    public String toString(){ return objectName; }
 
 }
