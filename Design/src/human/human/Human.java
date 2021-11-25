@@ -1,7 +1,11 @@
 package human.human;
 
 public abstract class Human {
+
+    Human(){};
+
     public static Human create(String name, String pnr) {
+
         char decidingChar = pnr.charAt(9);
         int decidingNumber = Character.getNumericValue(decidingChar);
 

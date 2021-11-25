@@ -1,13 +1,13 @@
 package human.human;
 
-private class NonBinary extends Human {
+public class NonBinary extends Human {
     String personName;
 
-    private NonBinary(String name){
+    NonBinary(String name){
         personName = name;
     }
 
     public String toString() {
-        return "Jag är icke-binär och heter " + personName + '\'';
+        return "Jag är icke-binär och heter " + personName + '\n';
     }
 }

@@ -3,7 +3,7 @@ package human;
 import human.human.Human;
 import human.human.NonBinary;
 
-public class Tester {
+public class NotFuncTester {
     public static void main(String [] args){
         Human billie = Human.create("Billie", "xxxxxx-560x");
         Human anna = Human.create("Anna", "xxxxxx-642x");
@@ -11,5 +11,7 @@ public class Tester {
         System.out.println(billie);
         System.out.println(anna);
         System.out.println(magnus);
+        //Human h = new Human(){};
+        //new NonBinary("hej");
     }
 }
