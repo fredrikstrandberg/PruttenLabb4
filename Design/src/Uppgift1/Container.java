@@ -34,6 +34,4 @@ public class Container extends Component{
         }
         return contentString.toString();
     }
-
-
 }

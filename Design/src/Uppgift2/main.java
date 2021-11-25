@@ -1,5 +1,7 @@
 package Uppgift2;
 
+import Uppgift2.Human.Human;
+
 public class main {
     public static void main(String[] args) {
         Human billie = Human.create("Billie", "xxxxxx-560x");
@@ -8,6 +10,5 @@ public class main {
         System.out.println(billie);
         System.out.println(anna);
         System.out.println(magnus);
-
     }
 }
