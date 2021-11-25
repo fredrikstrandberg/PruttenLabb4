@@ -3,8 +3,6 @@ package Uppgift1;
 import java.util.ArrayList;
 
 public class Container extends Component{
-    String objectName;
-    int objectWeight;
 
     ArrayList<Component> components = new ArrayList<>();
 
