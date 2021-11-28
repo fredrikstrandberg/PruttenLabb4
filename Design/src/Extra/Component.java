@@ -1,8 +1,12 @@
-package Uppgift1;
+package Extra;
+
+import java.util.*;
 
 abstract class Component {
     public String objectName;
     public int objectWeight;
+
+    public Component(){}
 
     public void add(Component newComponent){}
     public void remove(Component curComponent){}
