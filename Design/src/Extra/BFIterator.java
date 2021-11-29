@@ -1,28 +1,29 @@
 package Extra;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Stack;
 
 public class BFIterator implements Iterator<Component> {
+    Stack<Component> compStack = new Stack<>();
 
-    ArrayList<Component> components = new ArrayList<>();
-
-    BFIterator(Component startComp){
-        components.add(startComp);
+    BFIterator(Container startComp){
+        addChildren(startComp);
     }
 
-
     public boolean hasNext() {
-        return !components.isEmpty();
+        return !compStack.isEmpty();
     }
 
     public Component next() {
         if(this.hasNext()){
-            Component next = components.get(0);
-            components.remove(0);
-            return next;
+            return compStack.pop();
         }
-
         return null;
+    }
+
+    public void addChildren(Container curComp){
+        for (Component component : curComp) {
+            compStack.push(component);
+        }
     }
 }

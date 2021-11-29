@@ -1,5 +1,7 @@
 package Extra;
 
+import java.util.Iterator;
+
 public class Suitcase {
 
     public static void main(String[] args) {
@@ -36,11 +38,13 @@ public class Suitcase {
 
         plasticBag.add(fruit); plasticBag.add(chocolate); // add Leafs to plastic bag
 
+        suitcase.getContent();
 
-        System.out.println(suitcase);
+
+/*        System.out.println(suitcase);
         System.out.println(suitcase.getObjectWeight());
         headphoneCase.remove(headphones);
         System.out.println(suitcase);
-        System.out.println(suitcase.getObjectWeight());
+        System.out.println(suitcase.getObjectWeight());*/
     }
 }
