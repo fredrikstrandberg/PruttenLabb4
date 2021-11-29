@@ -1,8 +1,9 @@
-package Uppgift1;
+package Extra;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Container extends Component {
+public class Container extends Component implements Iterable<Component> {
 
     ArrayList<Component> components = new ArrayList<>();
 
@@ -33,5 +34,10 @@ public class Container extends Component {
             contentString.append("\t").append(component.toString()).append("\n");
         }
         return contentString.toString();
+    }
+
+
+    public Iterator<Component> iterator() {
+        return new BFIterator(this);
     }
 }
