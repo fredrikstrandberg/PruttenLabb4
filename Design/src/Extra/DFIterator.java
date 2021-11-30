@@ -7,7 +7,7 @@ public class DFIterator implements Iterator<Component> {
     Stack<Component> compStack = new Stack<>();
 
     public DFIterator(Component startComp) {
-        compStack.push(startComp);
+        addChildren(startComp);
     }
 
     public boolean hasNext() {

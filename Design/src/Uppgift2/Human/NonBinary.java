@@ -3,7 +3,7 @@ package Uppgift2.Human;
 public class NonBinary extends Human {
     String name;
 
-    public NonBinary(String newName) {
+    NonBinary(String newName) {
         name = newName;
     }
     public String toString(){

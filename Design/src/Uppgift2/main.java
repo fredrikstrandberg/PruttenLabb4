@@ -1,6 +1,6 @@
 package Uppgift2;
 
-import Uppgift2.Human.Human;
+import Uppgift2.Human.*;
 
 public class main {
     public static void main(String[] args) {

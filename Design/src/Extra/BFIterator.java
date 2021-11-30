@@ -7,7 +7,7 @@ public class BFIterator implements Iterator<Component> {
     LinkedList<Component> compList = new LinkedList<>();
 
     public BFIterator(Component startComp) {
-        compList.push(startComp);
+        addChildren(startComp);
     }
 
     public boolean hasNext() {
