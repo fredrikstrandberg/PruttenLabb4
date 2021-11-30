@@ -6,8 +6,8 @@ import java.util.Stack;
 public class BFIterator implements Iterator<Component> {
     Stack<Component> compStack = new Stack<>();
 
-    BFIterator(Container startComp){
-        addChildren(startComp);
+    public BFIterator(Component startComp) {
+        compStack.push(startComp);
     }
 
     public boolean hasNext() {
@@ -15,15 +15,17 @@ public class BFIterator implements Iterator<Component> {
     }
 
     public Component next() {
-        if(this.hasNext()){
-            return compStack.pop();
+        if (this.hasNext()) {
+            Component next = compStack.pop();
+            addChildren(next);
+            return next;
         }
         return null;
     }
 
-    public void addChildren(Container curComp){
-        for (Component component : curComp) {
-            compStack.push(component);
+    public void addChildren(Component curComp) {
+        if (curComp.getChildren() != null) {
+            compStack.addAll(curComp.getChildren());
         }
     }
 }

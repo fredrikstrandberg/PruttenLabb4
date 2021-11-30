@@ -5,26 +5,26 @@ import java.util.Iterator;
 public class Suitcase {
 
     public static void main(String[] args) {
-        Component suitcase = new Container("Suitcase", 100);
+        Container suitcase = new Container("Suitcase", 100);
 
-        Component toiletBag = new Container("Toilet bag", 100);
-        Component plasticBag = new Container("Plastic bag", 100);
-        Component backpack = new Container("Backpack", 100);
+        Container toiletBag = new Container("Toilet bag", 100);
+        Container plasticBag = new Container("Plastic bag", 100);
+        Container backpack = new Container("Backpack", 100);
 
-        Component headphoneCase = new Container("Headphone case", 100);
+        Container headphoneCase = new Container("Headphone case", 100);
 
-        Component toothbrush = new Leaf("Toothbrush", 100);
-        Component toothpaste = new Leaf("Toothpaste", 100);
-        Component hairbrush = new Leaf("Hairbrush", 100);
+        Leaf toothbrush = new Leaf("Toothbrush", 100);
+        Leaf toothpaste = new Leaf("Toothpaste", 100);
+        Leaf hairbrush = new Leaf("Hairbrush", 100);
 
-        Component headphones = new Leaf("Headphones", 100);
+        Leaf headphones = new Leaf("Headphones", 100);
 
-        Component fruit = new Leaf("Fruit", 100);
-        Component chocolate = new Leaf("Chocolate", 100);
+        Leaf fruit = new Leaf("Fruit", 100);
+        Leaf chocolate = new Leaf("Chocolate", 100);
 
-        Component underwear = new Leaf("Underwear", 100);
-        Component shirts = new Leaf("Shirts", 100);
-        Component pants = new Leaf("Pants", 100);
+        Leaf underwear = new Leaf("Underwear", 100);
+        Leaf shirts = new Leaf("Shirts", 100);
+        Leaf pants = new Leaf("Pants", 100);
 
 
 
@@ -38,13 +38,8 @@ public class Suitcase {
 
         plasticBag.add(fruit); plasticBag.add(chocolate); // add Leafs to plastic bag
 
-        suitcase.getContent();
+        Iterator<Component> BF = new BFIterator(suitcase);
+        suitcase.printContent(BF);
 
-
-/*        System.out.println(suitcase);
-        System.out.println(suitcase.getObjectWeight());
-        headphoneCase.remove(headphones);
-        System.out.println(suitcase);
-        System.out.println(suitcase.getObjectWeight());*/
     }
 }

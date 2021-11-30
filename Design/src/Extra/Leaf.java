@@ -1,5 +1,7 @@
 package Extra;
 
+import java.util.ArrayList;
+
 public class Leaf extends Component {
 
     public Leaf(String newObjectName, int newObjectWeight){
@@ -8,8 +10,7 @@ public class Leaf extends Component {
     }
     public int getObjectWeight() { return objectWeight; }
 
-    public String toString(){ return objectName; }
-
-
-
+    public ArrayList<Component> getChildren(){
+        return null;
+    }
 }
