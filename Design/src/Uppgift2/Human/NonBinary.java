@@ -5,7 +5,6 @@ public class NonBinary extends Human {
 
     public NonBinary(String newName) {
         name = newName;
-
     }
     public String toString(){
         return "Jag är IckeBinär och heter " + name;

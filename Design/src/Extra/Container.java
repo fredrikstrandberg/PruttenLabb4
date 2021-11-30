@@ -20,9 +20,6 @@ public class Container extends Component implements Iterable<Component> {
     public void add(Component newComponent){
         components.add(newComponent);
     }
-    public void remove(Component curComponent){
-        components.remove(curComponent);
-    }
 
     public int getObjectWeight() {
         int totalWeight = objectWeight;

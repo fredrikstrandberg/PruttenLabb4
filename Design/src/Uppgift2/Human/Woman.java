@@ -5,9 +5,7 @@ public class Woman extends Human{
 
     public Woman(String newName) {
         name = newName;
-
     }
-
     public String toString(){
         return "Jag är Kvinna och heter " + name;
     }

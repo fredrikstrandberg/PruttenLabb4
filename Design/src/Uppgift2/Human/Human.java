@@ -17,9 +17,7 @@ public abstract class Human {
             else{   //Man
                 return new Man(newName);
             }
-
     }
-
 }
 
 
