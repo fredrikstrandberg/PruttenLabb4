@@ -38,7 +38,9 @@ public class Suitcase {
 
         plasticBag.add(fruit); plasticBag.add(chocolate); // add Leafs to plastic bag
 
-        suitcase.getContent();
+        Iterator <Component> BF = new BFIterator(suitcase);
+        printContent(BF);
+
 
 
 /*        System.out.println(suitcase);

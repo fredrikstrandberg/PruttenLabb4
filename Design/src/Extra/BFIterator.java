@@ -1,13 +1,17 @@
 package Extra;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Stack;
 
 public class BFIterator implements Iterator<Component> {
+
     Stack<Component> compStack = new Stack<>();
 
-    BFIterator(Container startComp){
-        addChildren(startComp);
+    BFIterator(Component startComp){
+
+        compStack.push(startComp);
     }
 
     public boolean hasNext() {
@@ -15,10 +19,19 @@ public class BFIterator implements Iterator<Component> {
     }
 
     public Component next() {
-        if(this.hasNext()){
-            return compStack.pop();
+
+        if (compStack.isEmpty()) {
+            throw new NoSuchElementException();
         }
-        return null;
+        Component node = compStack.pop();
+        if (node != null) { //only if Composite.children has null
+            if (node instanceof Container curComp) {
+//                ArrayList<Component> components = node.getChildren();
+//                compStack.addAll(components);
+                addChildren(curComp);
+            }
+        }
+        return node;
     }
 
     public void addChildren(Container curComp){

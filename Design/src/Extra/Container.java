@@ -35,14 +35,24 @@ public class Container extends Component implements Iterable<Component> {
         }
         return contentString.toString();
     }
+    public void printContent(Iterator <Component> iterator) {
+        //System.out.print("\n" + objectName);
 
-    public Iterator<Component> iterator() {
-        return new BFIterator(this);
-    }
-
-    public void getContent(){
-        while(iterator().hasNext()){
-            System.out.println(iterator().next());
+        while (iterator.hasNext()) {
+            Component component = (Component) iterator.next();
+            System.out.println(component.objectName);
         }
     }
+
+    public BFIterator createIterator(Component component){
+        return new BFIterator(component);
+    }
+
+
+
+//    public void getContent(){
+//        while(iterator().hasNext()){
+//            System.out.println(iterator().next());
+//        }
+//    }
 }
