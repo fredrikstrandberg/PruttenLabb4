@@ -2,10 +2,12 @@ package Extra;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 public class Container extends Component implements Iterable<Component> {
 
     ArrayList<Component> components = new ArrayList<>();
+    String iteratorType;
 
     public Container(String newObjectName, int newObjectWeight){
         objectName = newObjectName;
@@ -30,8 +32,22 @@ public class Container extends Component implements Iterable<Component> {
         return totalWeight;
     }
 
-    public Iterator<Component> iterator() {
-        return new BFIterator(this);
+   public Iterator<Component> iterator() {
+        if(Objects.equals(iteratorType, "BF")){
+            return new BFIterator(this);
+        }
+        return new DFIterator(this);
+
+    }
+
+    public Iterator<Component> createBFIterator(){
+        iteratorType = "BF";
+        return iterator();
+    }
+
+    public Iterator<Component> createDFIterator(){
+        iteratorType = "DF";
+        return iterator();
     }
 
     public void printContent(Iterator<Component> iterator){
