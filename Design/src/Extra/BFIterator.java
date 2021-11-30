@@ -1,22 +1,22 @@
 package Extra;
 
 import java.util.Iterator;
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class BFIterator implements Iterator<Component> {
-    Stack<Component> compStack = new Stack<>();
+    LinkedList<Component> compList = new LinkedList<>();
 
     public BFIterator(Component startComp) {
-        compStack.push(startComp);
+        compList.push(startComp);
     }
 
     public boolean hasNext() {
-        return !compStack.isEmpty();
+        return !compList.isEmpty();
     }
 
     public Component next() {
         if (this.hasNext()) {
-            Component next = compStack.pop();
+            Component next = compList.pop();
             addChildren(next);
             return next;
         }
@@ -25,7 +25,7 @@ public class BFIterator implements Iterator<Component> {
 
     public void addChildren(Component curComp) {
         if (curComp.getChildren() != null) {
-            compStack.addAll(curComp.getChildren());
+            compList.addAll(curComp.getChildren());
         }
     }
 }

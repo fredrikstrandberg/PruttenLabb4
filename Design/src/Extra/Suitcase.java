@@ -40,6 +40,5 @@ public class Suitcase {
 
         Iterator<Component> BF = new BFIterator(suitcase);
         suitcase.printContent(BF);
-
     }
 }
