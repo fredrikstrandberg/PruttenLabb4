@@ -1,6 +1,7 @@
 package Extra;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 abstract class Component {
     public String objectName;
@@ -9,6 +10,8 @@ abstract class Component {
     public Component(){}
 
     public ArrayList<Component> getChildren(){ return null; }
+
+    public void printContent(Iterator<Component> iterator){ System.out.println(objectName); }
 
     public void add(Component newComponent){}
 
