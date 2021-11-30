@@ -37,7 +37,6 @@ public class Container extends Component implements Iterable<Component> {
             return new BFIterator(this);
         }
         return new DFIterator(this);
-
     }
 
     public Iterator<Component> createBFIterator(){
