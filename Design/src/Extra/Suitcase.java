@@ -39,6 +39,11 @@ public class Suitcase {
         plasticBag.add(fruit); plasticBag.add(chocolate); // add Leafs to plastic bag
 
         Iterator<Component> BF = new BFIterator(suitcase);
+        System.out.println("\nBredden först:");
         suitcase.printContent(BF);
+
+        Iterator<Component> DF = new DFIterator(suitcase);
+        System.out.println("\nDjupet först:");
+        suitcase.printContent(DF);
     }
 }
